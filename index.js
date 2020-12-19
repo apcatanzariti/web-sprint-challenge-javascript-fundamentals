@@ -77,7 +77,7 @@ const zooAnimals = [
  function lowerCaseNames(array){
   let displayLowerCase = [];
   let lowerCase = array.map(function(data){
-    displayLowerCase.push(`name: ${data.animal_name}, scientific: ${data.scientific_name}`.toLowerCase());
+    displayLowerCase.push(`${data.animal_name}`.toLowerCase());
   })
   return displayLowerCase;
 }
@@ -109,6 +109,7 @@ const zooAnimals = [
   let totalPop = array.reduce(function(counter, data){
     return counter + data.population;
   }, 0)
+  return totalPop;
 }
   
   
